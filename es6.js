@@ -164,3 +164,13 @@ console.log(allNamePrice);
 // for only console.log its good to use foreach ------------
 // its not return a value 
 const allForeach = products.forEach(x => console.log(x));
+//filter ---------------------
+const checkingPrice = products.filter(x => x.price > 100);
+const [ft, sed] = checkingPrice;
+console.log('hi', ft.price);
+
+// find method 
+// its will return Element not array 
+const fin = products.find(product => product.color == 'pink');
+console.log(fin);
+
