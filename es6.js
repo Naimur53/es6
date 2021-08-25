@@ -94,83 +94,113 @@
 // })
 // Destructuring Object to extract values to variables ----
 
-const ourObj = { id: 13232, name: 'sadi', ki: 'kisona' }
-const { id, name, ki } = ourObj;
-// console.log(id);
+// const ourObj = { id: 13232, name: 'sadi', ki: 'kisona' }
+// const { id, name, ki } = ourObj;
+// // console.log(id);
 
-//dive object 
-const company = {
-    tec: 2324,
-    ceo: { ceoName: 'sadi', work: '4hours' }
+// //dive object 
+// const company = {
+//     tec: 2324,
+//     ceo: { ceoName: 'sadi', work: '4hours' }
 
+// }
+// const { tec, ceo } = company;
+// const { ceoName, work } = ceo;
+// company.naimur = 'sa';
+// console.log(tec);
+// console.log(ceoName);
+// console.log(company);
+// // Array Destructuring, nested object Optional chaining------------
+// const [itsArray, its2ndarray] = [['sadi', 'naimur'], 323232]
+// console.log(itsArray, its2ndarray);
+// // now its time of object --- its simple different between array
+// const { sky, sad } = { sky: '4', sad: 'd' };
+// console.log(sky, sad);
+
+// // optional chaining --------------------------------
+
+// const company2 = {
+//     name: 'GP',
+//     ceo: { id: 1, name: 'ajmol', food: 'fuchka' },
+//     web: {
+//         work: 'website development',
+//         employee: 22,
+//         framework: 'react',
+//         tech: {
+//             first: 'html',
+//             second: 'css',
+//             third: 'js'
+//         }
+//     },
+// };
+// const { first, second, third } = company2.web.tech;
+// console.log(first, second, third);
+// //learning ??????????????????????????????????????????????????????
+// console.log(first?.what?.inn,);
+
+// // array map -------------------------
+// const myArray2 = [23, 56, 6773, 134, 4];
+// const multi = () => 2 * 2;
+
+// console.log(myArray2.map(multi));
+// console.log(myArray2.map(x => x * x));
+
+// // more array maping ------------------------
+
+// const products = [
+//     { name: 'water bottle', price: 50, color: 'yellow' },
+//     { name: 'mobile phone', price: 15000, color: 'black' },
+//     { name: 'smart watch', price: 3000, color: 'black' },
+//     { name: 'sticky note', price: 30, color: 'pink' },
+//     { name: 'water glass', price: 3, color: 'white' }
+// ];
+// const allNameValue = products.map(x => x.name);
+// const allNamePrice = products.map(x => x.price);
+// console.log(allNameValue);
+// console.log(allNamePrice);
+// // const allSingleItem = products.map(x => console.log(x.name));
+
+
+// // for only console.log its good to use foreach ------------
+// // its not return a value 
+// const allForeach = products.forEach(x => console.log(x));
+// //filter ---------------------
+// const checkingPrice = products.filter(x => x.price > 100);
+// const [ft, sed] = checkingPrice;
+// console.log('hi', ft.price);
+
+// // find method 
+// // its will return Element not array 
+// const fin = products.find(product => product.color == 'pink');
+// console.log(fin);
+
+// learning class ----------
+
+class Support {
+    name;
+    role = 'support web dev';
+    address = 'anything'
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+    startSession() {
+        console.log('start a support session')
+    }
 }
-const { tec, ceo } = company;
-const { ceoName, work } = ceo;
-company.naimur = 'sa';
-console.log(tec);
-console.log(ceoName);
-console.log(company);
-// Array Destructuring, nested object Optional chaining------------
-const [itsArray, its2ndarray] = [['sadi', 'naimur'], 323232]
-console.log(itsArray, its2ndarray);
-// now its time of object --- its simple different between array
-const { sky, sad } = { sky: '4', sad: 'd' };
-console.log(sky, sad);
+class Nai {
+    k;
+    role = 'nothing'
+    constructor(k, role) {
+        this.k = k;
+        this.role = role;
+    }
+}
+const amir = new Support('its amir khan', 'bd');
+const sadi = new Nai('its sadi', 'arab');
+console.log(sadi);
+amir.startSession();
 
-// optional chaining --------------------------------
-
-const company2 = {
-    name: 'GP',
-    ceo: { id: 1, name: 'ajmol', food: 'fuchka' },
-    web: {
-        work: 'website development',
-        employee: 22,
-        framework: 'react',
-        tech: {
-            first: 'html',
-            second: 'css',
-            third: 'js'
-        }
-    },
-};
-const { first, second, third } = company2.web.tech;
-console.log(first, second, third);
-//learning ??????????????????????????????????????????????????????
-console.log(first?.what?.inn,);
-
-// array map -------------------------
-const myArray2 = [23, 56, 6773, 134, 4];
-const multi = () => 2 * 2;
-
-console.log(myArray2.map(multi));
-console.log(myArray2.map(x => x * x));
-
-// more array maping ------------------------
-
-const products = [
-    { name: 'water bottle', price: 50, color: 'yellow' },
-    { name: 'mobile phone', price: 15000, color: 'black' },
-    { name: 'smart watch', price: 3000, color: 'black' },
-    { name: 'sticky note', price: 30, color: 'pink' },
-    { name: 'water glass', price: 3, color: 'white' }
-];
-const allNameValue = products.map(x => x.name);
-const allNamePrice = products.map(x => x.price);
-console.log(allNameValue);
-console.log(allNamePrice);
-// const allSingleItem = products.map(x => console.log(x.name));
-
-
-// for only console.log its good to use foreach ------------
-// its not return a value 
-const allForeach = products.forEach(x => console.log(x));
-//filter ---------------------
-const checkingPrice = products.filter(x => x.price > 100);
-const [ft, sed] = checkingPrice;
-console.log('hi', ft.price);
-
-// find method 
-// its will return Element not array 
-const fin = products.find(product => product.color == 'pink');
-console.log(fin);
-
+// inheritance -------------------------------------------
+const { x, y, z } = { x: 1, y1: 2, z: 3 };
+console.log(y);
