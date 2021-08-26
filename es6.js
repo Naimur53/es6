@@ -176,31 +176,77 @@
 
 // learning class ----------
 
-class Support {
-    name;
-    role = 'support web dev';
-    address = 'anything'
-    constructor(name, address) {
-        this.name = name;
-        this.address = address;
-    }
-    startSession() {
-        console.log('start a support session')
-    }
-}
-class Nai {
-    k;
-    role = 'nothing'
-    constructor(k, role) {
-        this.k = k;
-        this.role = role;
-    }
-}
-const amir = new Support('its amir khan', 'bd');
-const sadi = new Nai('its sadi', 'arab');
-console.log(sadi);
-amir.startSession();
+// class Support {
+//     name;
+//     role = 'support web dev';
+//     address = 'anything'
+//     constructor(name, address) {
+//         this.name = name;
+//         this.address = address;
+//     }
+//     startSession() {
+//         console.log('start a support session')
+//     }
+// }
+// class Nai {
+//     k;
+//     role = 'nothing'
+//     constructor(k, role) {
+//         this.k = k;
+//         this.role = role;
+//     }
+// }
+// const amir = new Support('its amir khan', 'bd');
+// const sadi = new Nai('its sadi', 'arab');
+// console.log(sadi);
+// amir.startSession();
 
-// inheritance -------------------------------------------
-const { x, y, z } = { x: 1, y1: 2, z: 3 };
-console.log(y);
+// // inheritance -------------------------------------------
+// const { x, y, z } = { x: 1, y1: 2, z: 3 };
+// console.log(y);
+
+//-----------------exam 
+// let thereA = x => x / 5;
+// const hi = thereA(50);
+// console.log(hi)
+//-------------3b
+// let thereA = (x, y) => (x + y) * 2;
+// const hi = thereA(50, 2);
+// console.log(hi)
+// console.log(hi)
+//-----3c
+// let thereA = (x, y, z) => x * y * z;
+// const hi = thereA(50, 2, 3);
+// console.log(hi);
+//-----3d
+// let thereA = (x, y) => {
+//     let re = x + y;
+//     re =re * 2;
+//     return re;
+
+// }
+// const hi = thereA(50, 2);
+// console.log(hi);
+// // ---------------5
+// const ourArray = [2, 423, 23, 23, 2];
+// const multi5 = ourArray.map(x => x * 5);
+// console.log(multi5);
+// ------7
+// const ourObj = [
+//     { price: 33442 },
+//     { price: 565 },
+//     { price: 12 },
+//     { price: 4546 },
+//     { price: 34 }
+// ];
+// const moreThan500 = ourObj.find(x => x.price > 5000);
+// console.log(moreThan500);
+const ourObj = { name: "sadi", age: 18, education: 'collage' }
+const { education } = ourObj;
+console.log(education);
+
+// last program 
+const hmm = (x, y, z = 3) => {
+    return x + y + z;
+}
+console.log(hmm(23, 2))
