@@ -241,12 +241,55 @@
 // ];
 // const moreThan500 = ourObj.find(x => x.price > 5000);
 // console.log(moreThan500);
-const ourObj = { name: "sadi", age: 18, education: 'collage' }
-const { education } = ourObj;
-console.log(education);
+// const ourObj = { name: "sadi", age: 18, education: 'collage' }
+// const { education } = ourObj;
+// console.log(education);
 
-// last program 
-const hmm = (x, y, z = 3) => {
-    return x + y + z;
+// // last program 
+// const hmm = (x, y, z = 3) => {
+//     return x + y + z;
+// }
+// console.log(hmm(23, 2));
+// // js api ore json 
+// const ourObj = { name: "sadi", age: 18, education: 'collage' }
+// const str1 = JSON.stringify(ourObj);
+// const convert = JSON.parse(str1);
+// console.log(convert);
+
+
+function loadData() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(data => console.log(data))
 }
-console.log(hmm(23, 2))
+function loadUser() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => displayPost(data))
+}
+function loadPost() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(res => res.json())
+        .then(data => console.log(data))
+}
+function displayPost(data) {
+    console.log(data);
+    const userDiv = document.getElementById('user');
+    for (const user of data) {
+        console.log(user.name)
+        const li = document.createElement('li');
+        li.innerHTML = `<span>User name: ${user.name} email:<a href='${user.email}'>${user.email}</a></span>`;
+        userDiv.appendChild(li);
+    }
+}
+
+// kanye rest api 
+const kanye = () => {
+    fetch('https://api.kanye.rest')
+        .then(res => res.json())
+        .then(data => loadKanye(data))
+}
+const loadKanye = (data) => {
+    console.log(data.quote);
+    document.getElementById('quote').innerText = data.quote;
+}
