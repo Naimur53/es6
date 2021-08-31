@@ -257,39 +257,61 @@
 // console.log(convert);
 
 
-function loadData() {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then(response => response.json())
-        .then(data => console.log(data))
-}
-function loadUser() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(data => displayPost(data))
-}
-function loadPost() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(res => res.json())
-        .then(data => console.log(data))
-}
-function displayPost(data) {
-    console.log(data);
-    const userDiv = document.getElementById('user');
-    for (const user of data) {
-        console.log(user.name)
-        const li = document.createElement('li');
-        li.innerHTML = `<span>User name: ${user.name} email:<a href='${user.email}'>${user.email}</a></span>`;
-        userDiv.appendChild(li);
-    }
-}
+// function loadData() {
+//     fetch('https://jsonplaceholder.typicode.com/todos/1')
+//         .then(response => response.json())
+//         .then(data => console.log(data))
+// }
+// function loadUser() {
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//         .then(response => response.json())
+//         .then(data => displayPost(data))
+// }
+// function loadPost() {
+//     fetch('https://jsonplaceholder.typicode.com/posts')
+//         .then(res => res.json())
+//         .then(data => console.log(data))
+// }
+// function displayPost(data) {
+//     console.log(data);
+//     const userDiv = document.getElementById('user');
+//     for (const user of data) {
+//         console.log(user.name)
+//         const li = document.createElement('li');
+//         li.innerHTML = `<span>User name: ${user.name} email:<a href='${user.email}'>${user.email}</a></span>`;
+//         userDiv.appendChild(li);
+//     }
+// }
 
-// kanye rest api 
-const kanye = () => {
-    fetch('https://api.kanye.rest')
-        .then(res => res.json())
-        .then(data => loadKanye(data))
-}
-const loadKanye = (data) => {
-    console.log(data.quote);
-    document.getElementById('quote').innerText = data.quote;
-}
+// // kanye rest api 
+// const kanye = () => {
+//     fetch('https://api.kanye.rest')
+//         .then(res => res.json())
+//         .then(data => loadKanye(data))
+// }
+// const loadKanye = (data) => {
+//     console.log(data.quote);
+//     document.getElementById('quote').innerText = data.quote;
+// // }
+// closure ----------------my----function
+// function up() {
+//     let s = 0;
+//     return () => ++s;
+
+
+// }
+// let c = up();
+// console.log(c());
+// console.log(c());
+// console.log(c());
+// closure ------------------jhanker 
+// function stopWatch() {
+//     let counter = 0;
+//     return function () {
+//         counter++;
+//         return counter;
+//     }
+// }
+// let clock1 = stopWatch();
+// console.log(clock1());
+// console.log(clock1());
